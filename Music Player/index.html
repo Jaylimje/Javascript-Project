@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/10fbecbb09.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-less-than"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="./marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" class="song-img">
+            <h1>Despacito</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <audio id="song">
+                <source src="./Animal_trance_mix_payal_naman_song____ganpati_dj_song_2015-1.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick="PlayPause()"><i class="fa-solid fa-play" id="play"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let progress = document.getElementById("progress");
+        let song = document.getElementById("song");
+        let playP = document.getElementById("play");
+
+        song.onloadedmetadata = function(){
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+        }
+
+        function PlayPause(){
+            if(playP.classList.contains("fa-pause")){
+                song.pause();
+                playP.classList.remove("fa-pause");
+                playP.classList.add("fa-play");
+            }
+            else{
+                song.play();
+                playP.classList.add("fa-pause");
+                playP.classList.remove("fa-play");
+                
+            }
+        }
+
+        if(song.play()){
+            setInterval(()=>{
+                progress.value=song.currentTime
+            },500)
+        }
+
+        progress.onchange = function(){
+            song.play();
+            song.currentTime = progress.value;
+            playP.classList.add("fa-pause")
+            playP.classList.remove("fa-play")
+        }
+
+    </script>
+
+</body>
+</html>
