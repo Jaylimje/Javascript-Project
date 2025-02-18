@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+.container{
+    position: absolute;
+    width: 40%;
+    top: 20%;
+    left: 15%;
+    padding: 20px;
+}
+
+.container h1{
+    color: yellow;
+    font-size: 48px;
+}
+
+.date{
+    margin: 40px 0;
+    background-color: plum;
+    padding: 30px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.date input{
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.date button{
+    padding: 15px 30px;
+    color: #333;
+    background-color: yellow;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.date input::-webkit-calendar-picker-indicator{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background-position: calc(-100%, -10px);
+    position: absolute;
+    background-size: 30px;
+    cursor: pointer;
+    align-items: right;
+    top: 20%;
+    left: 85%;
+}
+
+#result{
+    font-size: 18px;
+    color: aliceblue;
+}
+
+#result span{
+    font-size: 20px;
+    color: yellow;
+}
