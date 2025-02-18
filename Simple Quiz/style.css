@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+    background-color:bisque;
+}
+
+.app{
+    padding: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+    width: 40%;
+    margin: 30px auto;
+    background: white;
+    border-radius: 30px;
+}
+
+.Quiz{
+    padding: 15px 0;
+}
+
+#que{
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid gray;
+}
+
+#answer-btn{
+    margin: 10px 0;
+    display: block;
+}
+
+.btn{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px ;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+    color: #222;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.btn:hover:not([disabled]){
+    background-color: black;
+    color: #fff;
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+.thing{
+    background-color: rgb(213, 168, 120);
+    padding: 10px 20px;
+    font-size: 34px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: inline;
+}
+
+.next{
+    float: right;
+}
+
+.next::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.correct{
+    background-color: #9aeabc;
+}
+
+.incorrect{
+    background-color: #ff9393;
+}

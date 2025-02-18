@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/10fbecbb09.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Generate <br>A Random Password</h1>
+        <div class="pw">
+            <input type="text" id="password" placeholder="password">
+            <i class="fa-solid fa-copy fa-2x" onclick="copyPasswd()"></i>
+        </div>
+        <button onclick="createPassword()"><i class="fa-solid fa-bolt"></i>Generate Password</button>
+      
+    </div>
+
+    <script>
+        const passBox = document.getElementById("password")
+        const range = 12;
+
+        const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        const lowerCase = "abcdefghijklmnopqrstuvwxyz"
+        const digit = "0123456789"
+        const symbol = "!@#$%^&*()_-+/{}[]><~"
+
+        const allchar = upperCase + lowerCase + digit + symbol;
+
+        function createPassword(){
+            let password = ''
+            password += upperCase[Math.floor(Math.random() * upperCase.length)]
+            password += lowerCase[Math.floor(Math.random() * lowerCase.length)]
+            password += digit[Math.floor(Math.random() * digit.length)]
+            password += symbol[Math.floor(Math.random() * symbol.length)]
+
+            while(range > password.length){
+                password += allchar[Math.floor(Math.random() * allchar.length)]
+            }
+            passBox.value = password
+        }
+
+        function copyPasswd(){
+            passBox.select();
+            document.execCommand("copy");
+        }
+        
+    </script>
+
+</body>
+</html>
