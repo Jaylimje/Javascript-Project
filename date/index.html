@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Date</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <p id="Day">00</p>
+                <span>Days</span>
+            </div>
+            <div class="box">
+                <p id="Hour">00</p>
+                <span>Hours</span>
+            </div>
+            <div class="box">
+                <p id="Minute">00</p>
+                <span>Minutes</span>
+            </div>
+            <div class="box">
+                <p id="Second">00</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+    </div>
+
+    <script> 
+        var date = new Date("16 Feb, 2025").getTime();
+        console.log(date)
+        var x = setInterval(() => {
+            var now = new Date().getTime();
+            var distance = date - now;
+
+            var day = Math.floor(distance/(1000*60*60*24))
+            var hour = Math.floor(distance % (1000*60*60*24)/(1000*60*60))
+            var minute = Math.floor(distance % (1000*60*60)/(1000*60))
+            var second = Math.floor(distance % (1000*60)/(1000))
+           
+            document.getElementById("Day").innerHTML = day
+            document.getElementById("Hour").innerHTML = hour
+            document.getElementById("Minute").innerHTML = minute
+            document.getElementById("Second").innerHTML = second
+            
+        },1000)
+
+       
+        // var x = setInterval(() => {
+        //     var now = new Date()
+
+        //     var day = now.getDate()
+        //     var hour = now.getHours()
+        //     var minute = now.getMinutes()
+        //     var second = now.getSeconds()
+        //     document.getElementById("Day").innerHTML = day
+        //     document.getElementById("Hour").innerHTML = hour
+        //     document.getElementById("Minute").innerHTML = minute
+        //     document.getElementById("Second").innerHTML = second
+        // },1000)
+    </script>
+</body>
+</html>
