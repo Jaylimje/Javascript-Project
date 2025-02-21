@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body{
+    background-color: rgb(143, 143, 224);
+}
+
+.container form{
+    width: 50%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 30px;
+    padding-top: 50px;
+    border-radius: 5px;
+}
+
+#i{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+    background-color: #fff;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+    position: relative;
+}
+
+.input-box label{
+    flex-basis: 28%;
+}
+
+.input-box input, .input-box textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid gray;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+form button{
+    background-color: #141a34;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+
+.input-box span{
+    color: red;
+    position: absolute;
+    right: 17px;
+    bottom: 12px;
+    font-size: 14px;
+}
+
+#fix-error{
+    color: red;
+}
+
+.input-box span i{
+    color: seagreen;
+}
